@@ -10,3 +10,5 @@ Route::delete('remove-from-cart', [FrontController::class, 'removeCart'])->name(
 Route::post('checkout', [FrontController::class, 'checkout'])->name('checkout');
 Route::get('order-success/{id}', [FrontController::class, 'success'])->name('order.success');
 Route::get('/track-order', [FrontController::class, 'trackOrder'])->name('track.order');
+
+//
