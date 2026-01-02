@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // 1. Buat Akun Admin (Jika belum ada)
+        // 1. Buat Akun Admin 
         User::updateOrCreate([
             'email' => 'admin@admin.com',
         ], [
@@ -27,8 +27,7 @@ class DatabaseSeeder extends Seeder
         $cat2 = Category::create(['name' => 'Buah Segar', 'slug' => 'buah-segar']);
         $cat3 = Category::create(['name' => 'Kacang Gurih', 'slug' => 'kacang-gurih']);
 
-        // 3. Buat Produk Dummy (Stok awal 50)
-        // Note: Gambar dikosongkan dulu, nanti Anda upload manual pas Demo biar terlihat "Real"
+        // 3. Produk Dummy 
         $p1 = Product::create([
             'category_id' => $cat1->id,
             'name' => 'Choco Lava Explosion',
@@ -57,7 +56,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // 4. Buat Dummy Orders (Untuk Grafik Dashboard)
-        // Kita buat seolah-olah ada transaksi minggu lalu
         for ($i = 0; $i < 10; $i++) {
             $order = Order::create([
                 'customer_name' => 'Pelanggan ' . $i,
