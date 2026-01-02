@@ -31,7 +31,7 @@ class FrontController extends Controller
         $product = Product::findOrFail($id);
         $cart = session()->get('cart', []);
 
-        // Ambil jumlah dari input user (Fitur Qty yang sudah kita tambah)
+        // Ambil jumlah dari input user 
         $quantity = (int) $request->query('quantity', 1);
 
         // Validasi stok
@@ -82,7 +82,7 @@ class FrontController extends Controller
 
         try {
             DB::transaction(function () use ($request) {
-                // Ambil Cart, jika kosong default array kosong
+                // Ambil Cart
                 $cart = session('cart', []);
                 
                 if(empty($cart)) {
@@ -91,7 +91,7 @@ class FrontController extends Controller
 
                 $total = 0;
                 
-                // 2. Cek Stok Dulu
+                // 2. Cek Stok 
                 foreach($cart as $id => $details) {
                     $product = Product::lockForUpdate()->find($id);
                     if(!$product || $product->stock < $details['quantity']) {
