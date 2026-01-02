@@ -14,15 +14,13 @@ class OrdersChart extends ChartWidget
 
     protected function getData(): array
     {
-        // Menggunakan data real dari database (butuh package flowframe/laravel-trend)
-        // Jika tidak ingin install package tambahan, kita hardcode dummy data saja agar aman untuk deadline mepet
         
         return [
             'datasets' => [
                 [
                     'label' => 'Pesanan Masuk',
-                    'data' => [2, 5, 3, 10, 8, 12, 15], // Data dummy ceritanya order seminggu ini
-                    'backgroundColor' => '#db2777', // Warna Pink
+                    'data' => [2, 5, 3, 10, 8, 12, 15], // Data dummyseminggu ini
+                    'backgroundColor' => '#db2777', 
                     'borderColor' => '#db2777',
                 ],
             ],

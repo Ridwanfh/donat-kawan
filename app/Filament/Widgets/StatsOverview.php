@@ -9,7 +9,6 @@ use Filament\Widgets\StatsOverviewWidget\Stat;
 
 class StatsOverview extends BaseWidget
 {
-    // Opsional: Atur polling agar data update otomatis tiap 10 detik
     protected static ?string $pollingInterval = '10s';
 
     protected function getStats(): array
