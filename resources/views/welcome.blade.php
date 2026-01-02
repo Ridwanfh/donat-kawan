@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Donat KsaWan</title>
+    <title>Toko Donat KaWan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -13,13 +13,11 @@
         @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Fredoka', sans-serif; }
         
-        /* Custom Scrollbar biar rapi */
         ::-webkit-scrollbar { width: 8px; height: 8px; }
         ::-webkit-scrollbar-track { background: #fdf2f8; }
         ::-webkit-scrollbar-thumb { background: #db2777; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: #be185d; }
         
-        /* Hide Scrollbar for category but keep functionality */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
@@ -40,7 +38,7 @@
                 
                 <a href="{{ route('home') }}" class="text-2xl md:text-3xl font-bold text-pink-600 flex items-center gap-2 hover:scale-105 transition transform">
                     <div class="bg-pink-100 p-2 rounded-full"><i class="fas fa-donut text-pink-600"></i></div>
-                    <span class="text-gray-800 tracking-tight">KsaWan<span class="text-pink-500">.</span></span>
+                    <span class="text-gray-800 tracking-tight">KaWan<span class="text-pink-500">.</span></span>
                 </a>
 
                 <div class="hidden md:flex items-center space-x-8">
@@ -127,7 +125,7 @@
 
 <section class="py-12 bg-white/50 backdrop-blur-sm border-y border-pink-100 mb-10">
     <div class="container mx-auto px-4 text-center">
-        <h2 class="text-2xl font-bold text-gray-800 mb-8">Cara Pesan Donat KsaWan <i class="fas fa-utensils text-pink-500 ml-2"></i></h2>
+        <h2 class="text-2xl font-bold text-gray-800 mb-8">Cara Pesan Donat KaWan <i class="fas fa-utensils text-pink-500 ml-2"></i></h2>
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 relative">
             <div class="group" data-aos="fade-up" data-aos-delay="0">
@@ -318,7 +316,7 @@
                 <div>
                     <div class="flex items-center gap-2 mb-6">
                         <div class="bg-pink-600 p-2 rounded-lg"><i class="fas fa-donut text-white text-xl"></i></div>
-                        <span class="text-2xl font-bold">KsaWan Donuts</span>
+                        <span class="text-2xl font-bold">KaWan Donuts</span>
                     </div>
                     <p class="text-gray-400 mb-6 leading-relaxed">
                         Menyajikan kebahagiaan berbentuk bulat sejak 2025. Dibuat dengan bahan premium dan cinta yang tulus.
@@ -353,7 +351,7 @@
                     <ul class="space-y-4 text-gray-400">
                         <li class="flex gap-3">
                             <i class="fas fa-map-marker-alt mt-1 text-pink-600"></i>
-                            <span>Jl. KsaWan No. 123, Kampus Univ, Kota Pendidikan.</span>
+                            <span>Jl. KaWan No. 123, Kampus Univ, Kota Pendidikan.</span>
                         </li>
                         <li class="flex gap-3">
                             <i class="fas fa-phone mt-1 text-pink-600"></i>
@@ -361,14 +359,14 @@
                         </li>
                         <li class="flex gap-3">
                             <i class="fas fa-envelope mt-1 text-pink-600"></i>
-                            <span>hello@donatksawan.com</span>
+                            <span>hello@donatkawan.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2025 Toko Donat KsaWan. Built with Laravel 11 & Filament.</p>
+                <p>&copy; 2025 Toko Donat KaWan. Built with Laravel 11 & Filament.</p>
             </div>
         </div>
     </footer>
@@ -398,7 +396,7 @@
     @endif
 
     <script>
-        // Live Search Logic dengan Empty State
+        // Live Search 
         document.getElementById('searchInput').addEventListener('keyup', function() {
             let filter = this.value.toLowerCase();
             let products = document.querySelectorAll('.product-card');
@@ -407,19 +405,17 @@
 
             products.forEach(function(card) {
                 let title = card.querySelector('h3').innerText.toLowerCase();
-                // Optional: Cari juga di deskripsi biar makin canggih
                 let desc = card.querySelector('p').innerText.toLowerCase();
                 
                 if (title.includes(filter) || desc.includes(filter)) {
-                    card.style.display = ""; // Muncul
+                    card.style.display = ""; 
                     card.classList.add('animate-fade-in'); 
                     found = true;
                 } else {
-                    card.style.display = "none"; // Hilang
+                    card.style.display = "none"; 
                 }
             });
 
-            // Tampilkan pesan kosong jika tidak ada yang cocok
             if (!found) {
                 emptyState.classList.remove('hidden');
             } else {
