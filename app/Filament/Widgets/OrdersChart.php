@@ -19,7 +19,7 @@ class OrdersChart extends ChartWidget
             'datasets' => [
                 [
                     'label' => 'Pesanan Masuk',
-                    'data' => [2, 5, 3, 10, 8, 12, 15], // Data dummyseminggu 
+                    'data' => [2, 5, 3, 10, 8, 12, 15], // Data dummysemingg
                     'backgroundColor' => 'Blue', 
                     'borderColor' => 'Blue',
                 ],
