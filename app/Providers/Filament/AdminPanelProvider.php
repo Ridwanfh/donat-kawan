@@ -28,7 +28,7 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->colors([
-                'primary' => Color::Pink,
+                'primary' => Color::Blue,
             ])
             ->brandName('Admin Donat KsaWan')
             ->favicon(asset('favicon.ico'))

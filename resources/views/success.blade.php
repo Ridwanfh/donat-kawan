@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesanan Berhasil - Toko Donat KaWan</title>
+    <title>Pesanan Berhasil - Toko Donat KaWan
+
+    </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -11,12 +13,12 @@
         body { font-family: 'Fredoka', sans-serif; }
     </style>
 </head>
-<body class="bg-pink-50 min-h-screen flex items-center justify-center py-10">
+<body class="bg-blue-50 min-h-screen flex items-center justify-center py-10">
 
-    <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full text-center border-t-8 border-pink-500 relative overflow-hidden">
+    <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full text-center border-t-8 border-blue-500 relative overflow-hidden">
         
         <div class="mb-6">
-            <div class="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto text-4xl shadow-inner">
+            <div class="w-20 h-20 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center mx-auto text-4xl shadow-inner">
                 <i class="fas fa-check"></i>
             </div>
         </div>
@@ -33,7 +35,7 @@
             </div>
 
             <div class="flex justify-between text-sm text-gray-500 mb-2">
-                <span>Tipe: <span class="font-bold uppercase text-pink-600">{{ $order->order_type }}</span></span>
+                <span>Tipe: <span class="font-bold uppercase text-blue-600">{{ $order->order_type }}</span></span>
             </div>
 
             @if($order->order_type == 'delivery')
@@ -58,15 +60,15 @@
 
             <div class="flex justify-between text-lg font-bold text-gray-800">
                 <span>Total Bayar</span>
-                <span class="text-pink-600">Rp {{ number_format($order->total_price, 0, ',', '.') }}</span>
+                <span class="text-blue-600">Rp {{ number_format($order->total_price, 0, ',', '.') }}</span>
             </div>
         </div>
 
         <div class="space-y-3">
-            <a href="https://wa.me/?text=Halo%20Admin,%20saya%20sudah%20pesan%20dengan%20ID%20{{ $order->id }}" target="_blank" class="block w-full bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600 transition">
+            <a href="https://wa.me/6282124024905?text=Halo%20Admin,%20saya%20sudah%20pesan%20dengan%20ID%20{{ $order->id }}" target="_blank" class="block w-full bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600 transition">
                 <i class="fab fa-whatsapp"></i> Konfirmasi ke WhatsApp
             </a>
-            <a href="{{ route('home') }}" class="block w-full bg-pink-100 text-pink-600 font-bold py-3 rounded-lg hover:bg-pink-200 transition">
+            <a href="{{ route('home') }}" class="block w-full bg-blue-100 text-blue-600 font-bold py-3 rounded-lg hover:bg-blue-200 transition">
                 Pesan Lagi
             </a>
             <button onclick="window.print()" class="text-gray-400 text-sm hover:text-gray-600 mt-2 underline">

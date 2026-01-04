@@ -18,7 +18,7 @@ class StatsOverview extends BaseWidget
                 ->description('Pemasukan dari order selesai')
                 ->descriptionIcon('heroicon-m-arrow-trending-up')
                 ->color('success')
-                ->chart([7, 2, 10, 3, 15, 4, 17]), // Grafik dummy kecil untuk estetika
+                ->chart([7, 2, 10, 3, 15, 4, 17]), // Grafik dummy untuk estetika
 
             Stat::make('Order Baru', Order::where('status', 'pending')->count())
                 ->description('Menunggu konfirmasi')

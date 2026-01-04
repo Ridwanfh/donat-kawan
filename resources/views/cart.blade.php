@@ -11,12 +11,12 @@
         body { font-family: 'Fredoka', sans-serif; }
     </style>
 </head>
-<body class="bg-[#FFF5F7] min-h-screen">
+<body class="bg-[#F0F7FF] min-h-screen">
 
     <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
         <div class="container mx-auto px-4 py-4">
-            <a href="{{ route('home') }}" class="text-gray-600 hover:text-pink-600 font-bold flex items-center gap-2 transition">
-                <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-pink-100">
+            <a href="{{ route('home') }}" class="text-gray-600 hover:text-blue-600 font-bold flex items-center gap-2 transition">
+                <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-blue-100">
                     <i class="fas fa-arrow-left text-sm"></i>
                 </div>
                 Kembali ke Menu
@@ -40,7 +40,7 @@
                     <div class="hidden md:grid grid-cols-12 gap-4 text-sm text-gray-400 uppercase tracking-wider font-bold mb-2 pl-4">
                         <div class="col-span-6">Produk</div>
                         <div class="col-span-2 text-center">Harga</div>
-                        <div class="col-span-2 text-center">Qty</div>
+                        <div class="col-span-2 text-center">Qtyq</div>
                         <div class="col-span-2 text-right">Total</div>
                     </div>
 
@@ -73,7 +73,7 @@
                             </div>
 
                             <div class="col-span-2 flex justify-center">
-                                <span class="bg-pink-50 text-pink-600 font-bold px-4 py-1 rounded-full text-sm border border-pink-100">
+                                <span class="bg-blue-50 text-blue-600 font-bold px-4 py-1 rounded-full text-sm border border-blue-100">
                                     x {{ $details['quantity'] }}
                                 </span>
                             </div>
@@ -109,12 +109,12 @@
 
                 @else
                     <div class="text-center py-20 bg-white rounded-3xl shadow-sm border border-gray-100">
-                        <div class="w-24 h-24 bg-pink-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-shopping-basket text-4xl text-pink-300"></i>
+                        <div class="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shopping-basket text-4xl text-blue-300"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-800">Keranjang Masih Kosong</h3>
                         <p class="text-gray-400 mb-6">Yuk isi dengan yang manis-manis!</p>
-                        <a href="{{ route('home') }}" class="bg-pink-600 text-white px-8 py-3 rounded-full font-bold hover:bg-pink-700 transition shadow-lg shadow-pink-200">
+                        <a href="{{ route('home') }}" class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
                             Mulai Belanja
                         </a>
                     </div>
@@ -129,12 +129,12 @@
                         @csrf
                         <div>
                             <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Nama Lengkap</label>
-                            <input type="text" name="customer_name" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500 transition" placeholder="Siapa namamu?" required>
+                            <input type="text" name="customer_name" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="Siapa namamu?" required>
                         </div>
                         
                         <div>
                             <label class="block text-xs font-bold text-gray-400 uppercase mb-1">WhatsApp</label>
-                            <input type="number" name="customer_phone" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500 transition" placeholder="08xxxxx" required>
+                            <input type="number" name="customer_phone" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="08xxxxx" required>
                         </div>
 
                         <div>
@@ -142,13 +142,13 @@
                             <div class="grid grid-cols-2 gap-2">
                                 <label class="cursor-pointer">
                                     <input type="radio" name="order_type" value="pickup" class="peer sr-only" checked onchange="toggleAddress()">
-                                    <div class="bg-white border-2 border-gray-200 rounded-xl p-3 text-center peer-checked:border-pink-500 peer-checked:text-pink-600 peer-checked:bg-pink-50 transition">
+                                    <div class="bg-white border-2 border-gray-200 rounded-xl p-3 text-center peer-checked:border-blue-500 peer-checked:text-blue-600 peer-checked:bg-blue-50 transition">
                                         <i class="fas fa-store mb-1 block"></i> Pickup
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
                                     <input type="radio" name="order_type" value="delivery" class="peer sr-only" onchange="toggleAddress()">
-                                    <div class="bg-white border-2 border-gray-200 rounded-xl p-3 text-center peer-checked:border-pink-500 peer-checked:text-pink-600 peer-checked:bg-pink-50 transition">
+                                    <div class="bg-white border-2 border-gray-200 rounded-xl p-3 text-center peer-checked:border-blue-500 peer-checked:text-blue-600 peer-checked:bg-blue-50 transition">
                                         <i class="fas fa-motorcycle mb-1 block"></i> Delivery
                                     </div>
                                 </label>
@@ -157,7 +157,7 @@
 
                         <div id="addressBox" class="hidden">
                             <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Alamat Lengkap</label>
-                            <textarea name="address" rows="3" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500 transition" placeholder="Jalan, No Rumah, Patokan..."></textarea>
+                            <textarea name="address" rows="3" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="Jalan, No Rumah, Patokan..."></textarea>
                         </div>
 
                         <hr class="border-dashed border-gray-200 my-4">
@@ -167,7 +167,7 @@
                             <span class="text-2xl font-extrabold text-gray-800">Rp {{ number_format($total ?? 0, 0, ',', '.') }}</span>
                         </div>
 
-                        <button type="submit" class="w-full bg-gray-900 text-white font-bold py-4 rounded-xl hover:bg-pink-600 hover:scale-[1.02] transition shadow-xl disabled:opacity-50 disabled:cursor-not-allowed" {{ empty(session('cart')) ? 'disabled' : '' }}>
+                        <button type="submit" class="w-full bg-gray-900 text-white font-bold py-4 rounded-xl hover:bg-blue-600 hover:scale-[1.02] transition shadow-xl disabled:opacity-50 disabled:cursor-not-allowed" {{ empty(session('cart')) ? 'disabled' : '' }}>
                             Buat Pesanan <i class="fas fa-arrow-right ml-2"></i>
                         </button>
                     </form>

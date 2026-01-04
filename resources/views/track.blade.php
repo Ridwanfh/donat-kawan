@@ -11,22 +11,22 @@
         body { font-family: 'Fredoka', sans-serif; }
     </style>
 </head>
-<body class="bg-pink-50 min-h-screen flex flex-col">
+<body class="bg-[#F0F7FF] min-h-screen flex flex-col">
 
     <nav class="bg-white shadow-md p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="{{ route('home') }}" class="text-pink-600 font-bold hover:underline"><i class="fas fa-arrow-left"></i> Kembali ke Menu</a>
+            <a href="{{ route('home') }}" class="text-blue-600 font-bold hover:underline"><i class="fas fa-arrow-left"></i> Kembali ke Menu</a>
         </div>
     </nav>
 
     <div class="container mx-auto px-6 py-10 flex-grow flex flex-col items-center">
         
-        <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">Lacak Status Donatmu <i class="fas fa-search-location text-pink-500"></i></h1>
+        <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">Lacak Status Donatmu <i class="fas fa-search-location text-blue-500"></i></h1>
 
         <div class="bg-white p-6 rounded-2xl shadow-lg max-w-lg w-full mb-8">
             <form action="{{ route('track.order') }}" method="GET" class="flex gap-2">
-                <input type="number" name="order_id" placeholder="Masukkan Nomor Order (Contoh: 1)" class="w-full border rounded-lg px-4 py-3 focus:outline-pink-500" value="{{ request('order_id') }}" required>
-                <button type="submit" class="bg-pink-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-pink-700 transition">
+                <input type="number" name="order_id" placeholder="Masukkan Nomor Order (Contoh: 1)" class="w-full border rounded-lg px-4 py-3 focus:outline-blue-500" value="{{ request('order_id') }}" required>
+                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition">
                     Cek
                 </button>
             </form>
@@ -34,7 +34,7 @@
 
         @if(request()->has('order_id'))
             @if($order)
-                <div class="bg-white p-6 rounded-2xl shadow-xl max-w-2xl w-full border-t-4 border-pink-500">
+                <div class="bg-white p-6 rounded-2xl shadow-xl max-w-2xl w-full border-t-4 border-blue-500">
                     <div class="flex justify-between items-center mb-4 border-b pb-4">
                         <div>
                             <h2 class="text-xl font-bold text-gray-800">Order #{{ $order->id }}</h2>

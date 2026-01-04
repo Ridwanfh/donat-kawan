@@ -19,9 +19,9 @@ class OrdersChart extends ChartWidget
             'datasets' => [
                 [
                     'label' => 'Pesanan Masuk',
-                    'data' => [2, 5, 3, 10, 8, 12, 15], // Data dummyseminggu ini
-                    'backgroundColor' => '#db2777', 
-                    'borderColor' => '#db2777',
+                    'data' => [2, 5, 3, 10, 8, 12, 15], // Data dummyseminggu 
+                    'backgroundColor' => 'Blue', 
+                    'borderColor' => 'Blue',
                 ],
             ],
             'labels' => ['Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab', 'Min'],
@@ -30,6 +30,6 @@ class OrdersChart extends ChartWidget
 
     protected function getType(): string
     {
-        return 'line'; // Bisa ganti 'bar' atau 'line'
+        return 'line'; 
     }
 }
